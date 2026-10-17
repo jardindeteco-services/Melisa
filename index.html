@@ -55,9 +55,9 @@
 
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 2rem 5%;
+            padding: 3rem 5% 1rem 5%;
             position: absolute;
             width: 100%;
             z-index: 10;
@@ -65,8 +65,8 @@
 
         .logo {
             font-family: var(--font-serif);
-            font-size: 2rem;
-            letter-spacing: 4px;
+            font-size: 2.5rem;
+            letter-spacing: 6px;
             color: var(--secondary);
             text-decoration: none;
             text-transform: uppercase;
@@ -76,26 +76,12 @@
             color: var(--accent);
         }
 
-        nav a {
-            color: var(--secondary);
-            text-decoration: none;
-            margin-left: 2rem;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--accent);
-        }
-
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 120px 5% 60px 5%;
+            padding: 140px 5% 60px 5%;
             position: relative;
             z-index: 2;
         }
@@ -157,8 +143,10 @@
 
         .portfolio-display {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+            grid-template-columns: 1fr;
+            max-width: 450px;
+            margin: 0 auto;
+            width: 100%;
         }
 
         .image-wrapper {
@@ -244,12 +232,7 @@
 
         @media (max-width: 768px) {
             header {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1.5rem;
-            }
-            nav a {
-                margin: 0 0.75rem;
+                padding: 2rem 1.5rem 0 1.5rem;
             }
             .hero-container {
                 grid-template-columns: 1fr;
@@ -263,23 +246,19 @@
                 font-size: 2.5rem;
             }
             .portfolio-display {
-                max-width: 500px;
-                margin: 0 auto;
+                max-width: 400px;
             }
         }
     </style>
     <!-- Google Fonts for High-End Typography -->
-    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <a href="#" class="logo">Melisa<span>.</span></a>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#booking">Contact</a>
-        </nav>
     </header>
 
     <section class="hero" id="portfolio">
@@ -291,13 +270,8 @@
             </div>
             
             <div class="portfolio-display">
-                <!-- Replace 'image_9fQgGj.png' with your actual hosted image path -->
                 <div class="image-wrapper">
-                    <img src="image_9fQgGj.png" alt="Melisa Editorial Presentation">
-                </div>
-                <!-- Replace 'image_q9-UEs.png' with your actual hosted image path -->
-                <div class="image-wrapper">
-                    <img src="image_q9-UEs.png" alt="Melisa Portrait Presentation">
+                    <img src="1792129192050.jpg" alt="Melisa Professional Portfolio Feature">
                 </div>
             </div>
         </div>
@@ -305,18 +279,25 @@
 
     <section class="about-section" id="about">
         <div class="about-content">
-            <h2>Inviting & Striking Visuals</h2>
-            <p>Bringing a highly sophisticated aesthetic and graceful presence to every project, Melisa works fluidly across luxury branding, commercial media, production installations, and exclusive runway showcases. Designed to meet the creative requirements of discerning directors, photographers, and premium brand agencies worldwide.</p>
-            
-            <div class="contact-info" id="booking">
-                <p style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 3px; color: var(--accent);">Direct Booking & Representation</p>
-                <a href="tel:9165793284" class="phone-link">(916) 579-3284</a>
+            <h2>About Melisa</h2>
+            <p>Breaking boundaries through fluid expression, striking angles, and a commanding camera presence. With extensive experience walking international runways and anchoring commercial media portfolios, Melisa brings a refined blend of professional execution and creative artistic vision to every luxury production set.</p>
+        </div>
+    </section>
+
+    <section class="about-section" id="booking">
+        <div class="about-content">
+            <h2>Booking Inquiries</h2>
+            <p>For bookings, campaign details, or representation outreach, contact management directly at:</p>
+            <div class="contact-info">
+                <p>Direct Representation Line</p>
+                <!-- Updated phone number and tel: protocol structure -->
+                <a href="tel:+19165793284" class="phone-link">(916) 579-3284</a>
             </div>
         </div>
     </section>
 
     <footer>
-        &copy; 2026 Melisa Modeling. All Rights Reserved. Designed with Excellence.
+        &copy; 2026 Melisa Portfolio. All Rights Reserved.
     </footer>
 
 </body>
